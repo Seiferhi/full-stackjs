@@ -1,0 +1,74 @@
+body {
+        width: 80%;
+        margin: 0 auto;
+      }
+      header {
+        text-align: center;
+      }
+      header h1 {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 28px;
+        font-weight: 500;
+      }
+
+      section {
+        outline: 1px solid black;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 28px;
+        color: rgba(0,0,0,0.54)
+      }
+
+      form {
+        max-width: 75%;
+        margin: 0 auto;
+      }
+      form div {
+        padding: 15px;
+      }
+      label {
+        display: block;
+      }
+      input {
+        padding: 10px;
+        min-width: 200px;
+        font-size: 18px;
+      }
+      .form-sign-up input {
+        margin-bottom: 15px;
+      }
+      button {
+        padding: 7px 12px;
+        font-size: 18px;
+      }
+
+      @media screen and (min-width: 768px) {
+        section {
+          font-size: 22px;
+        }
+        label {
+          display: inline-block;
+          width: 20%;
+        }
+        input {
+          float: right;
+          width: 60%;
+        }
+        .form-sign-up input {
+          margin-bottom: 0;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        section {
+          display: inline-block;
+          vertical-align: top;
+          width: 49%;
+        }
+        .form-sign-up {
+          float: right;
+        }
+        hr {
+          display: none
+        }
+      }

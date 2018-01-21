@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Ubuntu" rel="stylesheet">
+    <title>welcome to my awesome website</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the X company</h1>
+    </header>
+    <main>
+      <section class="form-login">
+        <form onsubmit="return logIn()" action="index.html">
+          <div class="form-item">
+            <label for="email">Email</label>
+            <input class="user-email" id="email" type="email" required>
+          </div>
+          <div class="form-item">
+            <label for="">Password</label>
+            <input class="user-password" type="password" minlength="8" maxlength="15" required>
+          </div>
+          <div class="form-item">
+            <button type="submit" onclick="logIn()">Log in</button>
+          </div>
+        </form>
+      </section>
+
+      <hr>
+
+      <section class="form-sign-up">
+        <form onsubmit="return signUp()" action="index.html">
+          <div class="form-item">
+            <label for="firs-name">First name</label>
+            <input type="text" id="firs-name" required>
+          </div>
+          <div class="form-item">
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" required>
+          </div>
+          <div class="form-item">
+            <label for="new-password">Password</label>
+            <input type="password" id="new-password" minlength="8" maxlength="15" required>
+          </div>
+          <div class="form-item">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-Password" minlength="8" maxlength="15" required>
+          </div>
+          <div class="form-item">
+            <button type="submit">Sign up</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      function logIn() {
+        // select email input elemnt from the html page
+        let userEmail = document.querySelector('.user-email')
+        // store the email input value intro a variable
+        let userEmailValue = userEmail.value
+
+        // select password input elemnt from the html page
+        let userPassword = document.querySelector('.user-password')
+        // store the password input value into a variable
+        let userPasswordValue = userPassword.value
+
+        // if (!userEmail.checkValidity()) {
+        //   userEmail.setCustomValidity('hey not a valid email')
+        // }
+        //
+        // if (!userPassword.checkValidity()) {
+        //   userPassword.setCustomValidity('hey invalid password dude')
+        // }
+        let validPassword = isValidPassword(userPasswordValue)
+
+        if (validPassword) {
+          return true
+        }
+
+        return false
+      }
+
+      function isValidPassword(password) {
+        return (
+          checkForUpperCase(password) &&
+          checkForNumericValues(password) &&
+          checkForSpecialChars(password)
+        )
+      }
+
+      // check if the password contains a numeric userEmailValue
+      function checkForNumericValues(password) {
+        let valid = false;
+
+        for (let x of password) {
+          let char = Number(x)
+          if (!isNaN(char)) {
+            valid = true;
+            break;
+          }
+        }
+
+        return valid;""
+      }
+
+      // check if the password contains at least one uppercase character
+      function checkForUpperCase(password) {
+        let valid = false;
+
+        for (let char of password) {
+          // check that the current char is in [A, Z]
+          if (char >= "A" && char <= "Z") {
+            valid = true;
+            // end the for loop
+            break;
+          }
+        }
+
+        return valid
+      }
+
+      // check if the password contains at least one special value
+      function checkForSpecialChars(password) {
+        let valid = false;
+        let specials = ['+','-','*','/','!','#']
+        for (let char of password) {
+          // check that the current char is in [A, Z]
+          if (specials.includes(char)) {
+            valid = true;
+            // end the for loop
+            break;
+          }
+        }
+
+        return valid
+      }
+    </script>
+
+  </body>
+</html>
