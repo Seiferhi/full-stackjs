@@ -33,6 +33,7 @@ function getVectorSum(vector) {
 
 alert(getVectorSum(1,2,3))
 ```
+This should display **66**
 
 ## Question 2 - Extend the program
 
