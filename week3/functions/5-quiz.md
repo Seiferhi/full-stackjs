@@ -23,9 +23,9 @@
 5. You should name your functions in way that describe their role as accurately as possible?
 6. A function's name is part of it's documentation?
 7. Try to predict the output type of the following functions
-  1. getUserPassword()
-  2. getUserEmail()
-  3. isAuthorized()
-  4. computeTotalPrice()
-  5. computeElementPosition()
-  6. isValidKey()
+  - getUserPassword()
+  - getUserEmail()
+  - isAuthorized()
+  - computeTotalPrice()
+  - computeElementPosition()
+  - isValidKey()
