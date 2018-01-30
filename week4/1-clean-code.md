@@ -148,7 +148,7 @@ function getUserScore(userName) {
 
 ```javascript
 function getUserScore(userName) {
-  let user = user.find(function(user) {
+  let user = users.find(function(user) {
     return user.userName === userName
   })
   return user.scores
