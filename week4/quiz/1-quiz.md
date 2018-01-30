@@ -12,7 +12,7 @@
 1. True
 2. False
 
-## A JavaScript object can be of any type
+## A JavaScript object property key can be of any type
 
 1. True
 2. False
