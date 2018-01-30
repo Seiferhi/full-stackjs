@@ -112,9 +112,9 @@ let languages_uppercase = languages.map((str) => str.toUpperCase())
 ## Exercises
 
 ```javascript
-function execute(double, triple, n) {
+function execute(callbackA, callbackB, n) {
   let res = []
-  if (typeof callback === 'function') {
+  if (typeof callbackA === 'function' && typeof callbackB === 'function') {
     // from 1 up to (n-1) call double if i is odd and triple
     // anotherwise and push the result into res
     return res
