@@ -16,7 +16,7 @@ alert(user); // {name: "John", age: 30}
 ```
 
 * In the process of development:
-  - new properties are
+  - new properties are added
   - old properties are renamed
   - old properties are removed
 
