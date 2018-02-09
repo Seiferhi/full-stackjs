@@ -232,8 +232,8 @@ let square = n => n*n
 let double = n => 2*n
 
 console.log(product(3, identity)) // 6 = 1 * 2 * 3
-console.log(product(3, square))   // 14 = (1*1) * (2*2) * (3*3)
-console.log(product(3, double))   // 12 = (2*1) * (2*2) * (2*3)
+console.log(product(3, square))   // 36 = (1*1) * (2*2) * (3*3)
+console.log(product(3, double))   // 32 = (2*1) * (2*2) * (2*3)
 ```
 
 Using the **product(n, term)** function write a **factorial(n)** function.
